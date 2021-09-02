@@ -1,0 +1,13 @@
+
+# Ignore .env files.
+.env
+
+# Unfortunately I'm not able to share the model files right now
+# but they'll be able soon, you can still train your own model with 
+# the script.
+finetuned
+
+# I can't share the tokenizer.pickle as well because of the same 
+# restrictions with the model files, but it'll be available as well soon.
+.pickle
+
