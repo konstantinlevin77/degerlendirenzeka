@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/stylesheets/styles.css">
+    <script src="/static/scripts/orientationController.js"></script>
+    <script src="/static/scripts/sendModel.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>      
+    <title>Değerlendiren Zeka</title>
+</head>
+
+<body>
+    <div id="landscape-content">
+        
+        <div id="navbar">
+            <span id="navbar-logo">Değerlendiren Zeka</span>
+            <a href="/go" class="navbar-button">Verisetini büyütmede bize yardım edin!</a>
+        </div>
+
+        <h1 id="main-header">Değerlendiren Zeka</h3>
+            <p id="main-description">
+                Değerlendiren Zeka, Python programlama dili ve Tensorflow kütüphanesi kullanılarak yazılmış, açık uçlu
+                sorulara verilen cevapların doğruluğunu değerlendirebilen bir yinelenen sinir ağı modelidir.
+                Değerlendiren
+                Zeka'nın potansiyelini göstermek için eğitilen ilk prototipi bir coğrafya sorusu için oluşturulan veri
+                seti
+                ile yapılmıştır, coğrafya prototipi aşağıdan denenebilir.
+            </p>
+
+            <div id="main-container">
+
+                <p id="question">
+                    SORU:
+
+                    Dünya 4 ocakta güneşe en yakın olduğu anda olmasına rağmen bu dönemde hava sıcaklıklarının kuzey
+                    yarım
+                    kürede çok düşük olmasının sebebi nedir?
+                </p>
+                <textarea name="" id="answer-area" placeholder="Cevabınızı buraya giriniz." rows="6"></textarea>
+                <button id="send-button">Değerlendir</button>
+            </div>
+
+
+
+
+            <div id="result-container">
+                <span id="rcontainer-result-text"></span><span id="rcontainer-result-percentage"></span>
+            </div>
+
+            <div id="footer">
+                Değerlendiren Zeka, 2021. <br><br>
+                <span>Bize ulaşın:</span><span class="footer-sub-text"> degerlendirenzeka@protonmail.com</span>
+            </div>
+            <div id="portrait-content" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: bold;">
+                Hey! Cihazının boyutuna göre şu an bu siteyi yanlış görüyor olabilirsin, siteyi sorunsuz görmek için lütfen telefonunu yan çevir.
+            </div>
+    </div>
+
+</body>
+
+</html>
