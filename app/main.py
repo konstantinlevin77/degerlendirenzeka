@@ -17,7 +17,9 @@ app.register_blueprint(database_api)
 def main_page():
     return render_template("index.html")
 
-
+@app.route("/helpus",methods=["GET"])
+def helpus_page():
+    return render_template("helpus.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
