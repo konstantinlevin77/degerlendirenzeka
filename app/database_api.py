@@ -23,7 +23,18 @@ def add_question():
                 dao = QuestionsDao()
                 dao.add(new_question)
                 return jsonify({"result":"Successful"})
-    return jsonify({"result":"Successful"})
+    return jsonify({"result":"Failed"})
+
+@database_api.route("/api/database/deleteQuestionById",methods=["POST"])
+def delete_question_by_id():
+    id_value = request.args.get("id")
+    api_key = request.args.get("apikey")
+    if id_value is not None:
+        if api_key == API_KEY:
+            dao = QuestionsDao()
+            dao.delete(Question(id=id_value))
+            return jsonify({"result":"Successful"})
+    return jsonify({"result":"Failed"})
 
 
 # WITHOUT API KEY
@@ -55,6 +66,7 @@ def get_all_answers():
                 "question_id":r.question_id,
                 "answer":r.answer
                 })
+
         return jsonify(results)
     return None
 
