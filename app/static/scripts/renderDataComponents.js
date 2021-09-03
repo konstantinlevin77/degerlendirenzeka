@@ -1,6 +1,6 @@
 function fetchAndApply() {
 
-    const API_KEY = "4KJG4U1438FGJXFH4RUFGJWHGTUAKGJFNVHJK125G34"
+    const API_KEY = "API_KEY_HERE"
 
     fetch(`https://degerlendirenzeka-deploy.herokuapp.com/api/database/getAllQuestions?apikey=${API_KEY}`)
         .then(response => response.json())
