@@ -22,6 +22,8 @@ def add_question():
                 new_question = Question(question_text=content.get("question"))
                 dao = QuestionsDao()
                 dao.add(new_question)
+                return jsonify({"result":"Successful"})
+    return jsonify({"result":"Successful"})
 
 
 # WITHOUT API KEY
@@ -36,6 +38,8 @@ def add_answer():
                 )
                 dao = AnswersDao()
                 dao.add(new_answer)
+                return jsonify({"result":"Successful"})
+    return jsonify({"result":"Failed"})
 
 
 # WITH API KEY
@@ -58,16 +62,20 @@ def get_all_answers():
 @database_api.route("/api/database/getAllQuestions",methods=["GET"])
 def get_all_questions():
     key = request.args.get("apikey")
-    if key == API_KEY:
 
+    if key == API_KEY:
         results = []
         dao = QuestionsDao()
         for r in dao.find_all():
-            results.append({
+
+            value_in_json_format = {
                 "id":r.id,
                 "question_text":r.question_text
-            })
-        print("Getall query!!")
-        print(results)
+            }
+
+            print(value_in_json_format)
+            results.append(value_in_json_format)
         return jsonify(results)
-    return None
+
+    print("WRONG API KEY!")
+    return []

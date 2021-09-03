@@ -12,19 +12,19 @@ class QuestionsDao(BaseDao):
 
     
     def add(self,question:Question):
-        self.execute_query("INSERT INTO questions(question_text) VALUES(?)",[question.question_text])
+        self.execute_query("INSERT INTO questions(question_text) VALUES(%s)",[question.question_text])
 
 
     def delete(self,question:Question):
-        self.execute_query("DELETE FROM questions WHERE id=?",[question.id])
+        self.execute_query("DELETE FROM questions WHERE id=%s",[question.id])
 
 
     def update(self,question:Question):
-        self.execute_query("UPDATE questions SET question_text=? WHERE id=?",[question.question_text,question.id])
+        self.execute_query("UPDATE questions SET question_text=%s WHERE id=%s",[question.question_text,question.id])
 
 
     def find_by_question_text(self,question_text):
-        result = self.execute_query("SELECT * FROM questions WHERE question_text=?",[question_text],True)
+        result = self.execute_query("SELECT * FROM questions WHERE question_text=%s",[question_text],True)
         if len(result) > 0:
             result = result[0]
         else:
@@ -33,7 +33,7 @@ class QuestionsDao(BaseDao):
 
 
     def find_by_id(self,question_id):
-        result = self.execute_query("SELECT * FROM questions WHERE id=?",[question_id],True)
+        result = self.execute_query("SELECT * FROM questions WHERE id=%s",[question_id],True)
         if len(result) > 0:
             result = result[0]
         else:

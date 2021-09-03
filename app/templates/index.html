@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../static/stylesheets/styles.css">
+
     <script src="/static/scripts/orientationController.js"></script>
     <script src="/static/scripts/sendModel.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>      
     <title>Değerlendiren Zeka</title>
 </head>
 
 <body>
     <div id="landscape-content">
         
-        <div id="navbar">
-            <span id="navbar-logo">Değerlendiren Zeka</span>
+        <div class="navbar">
+            <span class="navbar-logo">Değerlendiren Zeka</span>
             <a href="/go" class="navbar-button">Verisetini büyütmede bize yardım edin!</a>
         </div>
 
-        <h1 id="main-header">Değerlendiren Zeka</h3>
-            <p id="main-description">
+        <h1 class="main-header">Değerlendiren Zeka</h1>
+            <p class="main-description">
                 Değerlendiren Zeka, Python programlama dili ve Tensorflow kütüphanesi kullanılarak yazılmış, açık uçlu
                 sorulara verilen cevapların doğruluğunu değerlendirebilen bir yinelenen sinir ağı modelidir.
                 Değerlendiren
@@ -30,7 +31,7 @@
                 ile yapılmıştır, coğrafya prototipi aşağıdan denenebilir.
             </p>
 
-            <div id="main-container">
+            <div class="main-container">
 
                 <p id="question">
                     SORU:
@@ -50,7 +51,7 @@
                 <span id="rcontainer-result-text"></span><span id="rcontainer-result-percentage"></span>
             </div>
 
-            <div id="footer">
+            <div class="footer">
                 Değerlendiren Zeka, 2021. <br><br>
                 <span>Bize ulaşın:</span><span class="footer-sub-text"> degerlendirenzeka@protonmail.com</span>
             </div>
