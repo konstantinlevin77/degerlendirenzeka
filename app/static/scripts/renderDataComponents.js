@@ -1,6 +1,7 @@
 function fetchAndApply() {
 
-    const API_KEY = "API_KEY_HERE"
+    //const API_KEY = "API_KEY_HERE"
+    const API_KEY = "4KJG4U1438FGJXFH4RUFGJWHGTUAKGJFNVHJK125G34";
 
     fetch(`https://degerlendirenzeka-deploy.herokuapp.com/api/database/getAllQuestions?apikey=${API_KEY}`)
         .then(response => response.json())
@@ -30,6 +31,7 @@ function renderElements(data) {
 
         let textAreaElement = document.createElement("textarea");
         textAreaElement.setAttribute("class", "question-textarea");
+        textAreaElement.setAttribute("placeholder","Cevabınızı buraya giriniz.");
 
         let pushButtonElement = document.createElement("button");
         pushButtonElement.setAttribute("class", "question-button");
