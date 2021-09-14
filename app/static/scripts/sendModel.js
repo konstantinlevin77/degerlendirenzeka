@@ -31,10 +31,10 @@ window.onload = function () {
 
             });
 
-        let postData = {
+        let postData = JSON.stringify({
             question_id: 1,
             answer: document.getElementById("answer-area").value
-        }
+        });
 
         let options = {
             method: 'POST',
