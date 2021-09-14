@@ -1,7 +1,8 @@
 function fetchAndApply() {
 
     //const API_KEY = "API_KEY_HERE"
-    const API_KEY = "4KJG4U1438FGJXFH4RUFGJWHGTUAKGJFNVHJK125G34";
+    //const API_KEY = "4KJG4U1438FGJXFH4RUFGJWHGTUAKGJFNVHJK125G34";
+    const API_KEY = "1341FGGHAGRUGJBVNDJN53187XCVGHDK32568"
 
     fetch(`https://degerlendirenzeka-deploy.herokuapp.com/api/database/getAllQuestions?apikey=${API_KEY}`)
         .then(response => response.json())
@@ -9,17 +10,28 @@ function fetchAndApply() {
             renderElements(jsonData);
 
         })
-
-
-
 }
 
 
 function renderElements(data) {
 
+    let questionVal = 1;
     data.forEach(element => {
+
+       
+
         let id = element.id;
         let questionText = element["question_text"];
+
+
+        /*
+        Question 1 was our question that we've used to create the prototype. Because of
+        some confusions that people has experienced when they use the website, we've decided to remove it from the "help us!" page. Instead, we're
+        going to collect the data that people write in the prototype page.
+        */
+        if (id == 1) {
+            return;
+        }
 
         let questionContainerElement = document.createElement("div");
         questionContainerElement.setAttribute("class", "question-container");
@@ -27,7 +39,7 @@ function renderElements(data) {
 
         let questionTextElement = document.createElement("p");
         questionTextElement.setAttribute("class", "question-text");
-        questionTextElement.innerHTML = questionText;
+        questionTextElement.innerHTML = `SORU ${questionVal}: <br>${questionText}`;
 
         let textAreaElement = document.createElement("textarea");
         textAreaElement.setAttribute("class", "question-textarea");
@@ -81,7 +93,7 @@ function renderElements(data) {
         let mainQuestionContainer = document.getElementById("main-question-container");
         mainQuestionContainer.appendChild(questionContainerElement);
 
-
+        questionVal = questionVal + 1;
 
     });
 }
