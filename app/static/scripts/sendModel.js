@@ -36,7 +36,7 @@ window.onload = function () {
             answer: document.getElementById("answer-area").value
         });
 
-        let options = {
+        options = {
             method: 'POST',
             headers: {
                 'Accept': 'application / json',
