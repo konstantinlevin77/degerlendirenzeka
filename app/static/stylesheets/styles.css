@@ -19,6 +19,8 @@ body {
 
 
 .navbar-logo{
+    text-decoration: none;
+    color: white;
     float:left;
     width: auto;
     margin-right: 0.10vw;
@@ -157,8 +159,10 @@ body {
 
 #result-container{
     
-    margin-bottom: 10%;
+    margin-bottom: 1vw;
     text-align: center;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    background-color: #1C5D99;
+    color: white;
 }

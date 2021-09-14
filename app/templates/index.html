@@ -8,7 +8,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../static/stylesheets/styles.css">
     <script src="/static/scripts/orientationController.js"></script>
     <script src="/static/scripts/sendModel.js"></script>
@@ -16,52 +17,55 @@
 </head>
 
 <body>
-    <div id="landscape-content">
 
-        <div class="navbar">
-            <span class="navbar-logo">Değerlendiren Zeka</span>
-            <a href="/helpus" class="navbar-button">Verisetini büyütmede bize yardım edin!</a>
-        </div>
+    <div class="navbar">
+        <a href="/" class="navbar-logo">Değerlendiren Zeka</a>
+        <a href="/helpus" class="navbar-button">Verisetini büyütmede bize yardım edin!</a>
+    </div>
 
-        <h1 class="main-header">Değerlendiren Zeka</h1>
-        <p class="main-description">
-            Değerlendiren Zeka, Python programlama dili ve Tensorflow kütüphanesi kullanılarak yazılmış, açık uçlu
-            sorulara verilen cevapların doğruluğunu değerlendirebilen bir yinelenen sinir ağı modelidir.
-            Değerlendiren
-            Zeka'nın potansiyelini göstermek için eğitilen ilk prototipi bir coğrafya sorusu için oluşturulan veri
-            seti
-            ile yapılmıştır, coğrafya prototipi aşağıdan denenebilir.
+    <h1 class="main-header">Değerlendiren Zeka</h1>
+    <p class="main-description">
+        Değerlendiren Zeka, Python programlama dili ve Tensorflow kütüphanesi kullanılarak yazılmış, açık uçlu
+        sorulara verilen cevapların doğruluğunu değerlendirebilen bir yinelenen sinir ağı modelidir.
+        Değerlendiren
+        Zeka'nın potansiyelini göstermek için eğitilen ilk prototipi bir coğrafya sorusu için oluşturulan veri
+        seti
+        ile yapılmıştır, coğrafya prototipi aşağıdan denenebilir.
+    </p>
+
+    <div id="result-container">
+        <span id="rcontainer-result-text"></span><span id="rcontainer-result-percentage"></span>
+    </div>
+
+    <div class="main-container">
+
+        <p id="question">
+            SORU:
+
+            Dünya 4 ocakta güneşe en yakın olduğu anda olmasına rağmen bu dönemde hava sıcaklıklarının kuzey
+            yarım
+            kürede çok düşük olmasının sebebi nedir?
         </p>
-
-        <div class="main-container">
-
-            <p id="question">
-                SORU:
-
-                Dünya 4 ocakta güneşe en yakın olduğu anda olmasına rağmen bu dönemde hava sıcaklıklarının kuzey
-                yarım
-                kürede çok düşük olmasının sebebi nedir?
-            </p>
-            <textarea name="" id="answer-area" placeholder="Cevabınızı buraya giriniz." rows="6"></textarea>
-            <button id="send-button">Değerlendir</button>
-        </div>
+        <textarea name="" id="answer-area" placeholder="Cevabınızı buraya giriniz." rows="6"></textarea>
+        <button id="send-button">Değerlendir</button>
+    </div>
 
 
 
 
-        <div id="result-container">
-            <span id="rcontainer-result-text"></span><span id="rcontainer-result-percentage"></span>
-        </div>
+    <div id="result-container">
+        <span id="rcontainer-result-text"></span><span id="rcontainer-result-percentage"></span>
+    </div>
 
-        <div class="footer">
-            Değerlendiren Zeka, 2021. <br><br>
-            <span>Bize ulaşın:</span><span class="footer-sub-text"> degerlendirenzeka@protonmail.com</span>
-        </div>
-        <div id="portrait-content"
-            style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: bold;">
-            Hey! Cihazının boyutuna göre şu an bu siteyi yanlış görüyor olabilirsin, siteyi sorunsuz görmek için lütfen
-            telefonunu yan çevir.
-        </div>
+    <div class="footer">
+        Değerlendiren Zeka, 2021. <br><br>
+        <span>Bize ulaşın:</span><span class="footer-sub-text"> degerlendirenzeka@protonmail.com</span>
+    </div>
+
+    <div class="portrait-content"
+        style="font-family: 'Roboto',sans-serif;">
+        Hey! Cihazının boyutuna göre şu an bu siteyi yanlış görüyor olabilirsin, siteyi sorunsuz görmek için lütfen
+        telefonunu yan çevir.
     </div>
 
 </body>

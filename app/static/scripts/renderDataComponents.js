@@ -41,6 +41,7 @@ function renderElements(data) {
 
             let questionsId = pushButtonElement.parentElement.getAttribute("id");
             let answerText = textAreaElement.value;
+            textAreaElement.value = "";
 
             let postdata = JSON.stringify({
                 answer: answerText,

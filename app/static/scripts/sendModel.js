@@ -3,8 +3,6 @@ window.onload = function () {
 
     let button = document.getElementById("send-button");
 
-
-
     button.onclick = function () {
 
         console.log("Button clicked!!!!");
