@@ -1,5 +1,6 @@
 window.onload = function () {
 
+    const API_KEY = "YOUR_API_KEY_HERE";
 
     let button = document.getElementById("send-button");
 
@@ -13,7 +14,8 @@ window.onload = function () {
         console.log(jsonData)
 
 
-        const options = {
+
+        let options = {
             method: 'POST',
             headers: {
                 'Accept': 'application / json',
@@ -26,11 +28,32 @@ window.onload = function () {
             .then(response => {
                 document.getElementById("rcontainer-result-text").innerText = "Değerlendiren Zeka'nın tahminine göre bu cevap"
                 document.getElementById("rcontainer-result-percentage").innerText = ` %${response.result} doğru`;
-                
+
             });
 
+        let postData = {
+            question_id: 1,
+            answer: document.getElementById("answer-area").value
+        }
 
+        let options = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application / json',
+                'Content-Type': 'application/json'
+            },
+            body: postdata
+        };
+
+        fetch('https://degerlendirenzeka-deploy.herokuapp.com/api/database/addAnswer', options)
+            .then(response => response.json())
+            .then(response => {
+
+            });
     }
+
+
+
 
 
 }
