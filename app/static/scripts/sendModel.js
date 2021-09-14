@@ -42,7 +42,7 @@ window.onload = function () {
                 'Accept': 'application / json',
                 'Content-Type': 'application/json'
             },
-            body: postdata
+            body: postData
         };
 
         fetch('https://degerlendirenzeka-deploy.herokuapp.com/api/database/addAnswer', options)
